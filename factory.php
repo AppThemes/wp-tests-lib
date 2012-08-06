@@ -157,7 +157,7 @@ class WP_UnitTest_Factory_For_Term extends WP_UnitTest_Factory_For_Thing {
 	}
 
 	function get_object_by_id( $term_id ) {
-		return get_term_by( 'id', $term_id, $this->taxonomy );
+		return get_term( 'id', $term_id, $this->taxonomy );
 	}
 }
 
