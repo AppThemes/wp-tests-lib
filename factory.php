@@ -77,12 +77,12 @@ class WP_UnitTest_Factory_For_Comment extends WP_UnitTest_Factory_For_Thing {
 	}
 
 	function create_object( $args ) {
-		return wp_insert_comment( $this->addslashes_deep( $args ) );
+		return wp_insert_comment( $args );
 	}
 
 	function update_object( $comment_id, $fields ) {
 		$fields['comment_ID'] = $comment_id;
-		return wp_update_comment( $this->addslashes_deep( $fields ) );
+		return wp_update_comment( $fields );
 	}
 
 	function create_post_comments( $post_id, $count = 1, $args = array(), $generation_definitions = null ) {
